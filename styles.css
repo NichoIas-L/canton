@@ -1,4 +1,3 @@
-/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +17,14 @@ body {
     color: #333;
 }
 
+/* Header and Navigation */
 .main-header {
     padding: 0;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background: transparent;
     transition: background-color 0.3s ease;
@@ -40,36 +42,20 @@ body {
     color: white;
 }
 
-/* Header and Navigation */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 1.5rem;
-    z-index: 1000;
-}
-
 nav {
     max-width: 1280px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem; /* Updated padding */
+    padding: 0rem 1rem;
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
     padding: 1.5rem;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
 }
 
 nav a {
@@ -80,16 +66,6 @@ nav a {
 
 nav a:hover {
     color: white;
-}
-
-.phone-number {
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-}
-
-.phone-number:hover {
-    border-color: white;
 }
 
 .nav-links a {
@@ -113,11 +89,6 @@ nav a:hover {
     color: #8b0000;
 }
 
-.order-link {
-    color: #8b0000 !important;
-}
-
-
 /* Main Content */
 main {
     min-height: 100vh;
@@ -139,27 +110,19 @@ main {
     justify-content: center;
 }
 
-.content {
+.logo-container {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
 }
 
-.logo {
-    width: 256px;
-    height: 256px;
-}
-
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.logo-container {
-    text-align: center;
+.restaurant-logo {
+    width: 200px;  /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(5px 5px 5px rgba(133, 133, 133, 0.726));
 }
 
 .logo-container h1 {
@@ -168,52 +131,9 @@ main {
     color: #333;
 }
 
-.tagline {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-.menu-button {
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.75rem 2rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.menu-button:hover {
-    color: white;
-    border-color: white;
-}
-
-.established {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 0.875rem;
-    letter-spacing: 0.1em;
-    margin-top: 4rem;
-}
-
-.established div {
-    margin: 0.25rem 0;
-}
-
-.food-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     background: #303030;  /* Dark grey background */
     color: white;     /* White text */
     position: relative; /* Add this to ensure footer appears above images */
@@ -274,10 +194,10 @@ footer {
 
 .menu-nav-btn {
     background: transparent;
-    border: 2px solid white;
+    border: 1px solid white;
     color: white;
     padding: 1rem 2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -310,13 +230,11 @@ footer {
     animation: fadeIn 0.6s ease forwards;
 }
 
-.menu-section h2 {
+.menu-intro {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.8rem;
-    font-weight: normal;
-    color: #8b0000;
-    width: 100%;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 /* Menu Items Layout */
@@ -342,14 +260,15 @@ footer {
 }
 
 .item-header h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
     color: #333;
-    padding-right: 2rem;  /* Use padding instead of margin */
+    flex: 1;          /* Take up available space */
+    margin-right: 2rem; /* Consistent spacing before price */
 }
 
 .price {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: #333;
     min-width: 50px;
     text-align: right;
@@ -381,227 +300,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Mobile Adjustments */
-@media (max-width: 1024px) {
-    .menu-layout {
-        flex-direction: column;
-    }
-
-    .menu-hero {
-        position: relative;
-        width: 100%;
-        height: auto;
-        min-height: 300px;
-    }
-
-    .menu-container {
-        width: 100%;
-        margin-left: 0;
-        padding: 2rem;
-    }
-
-    .menu-nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-/* Mobile Menu Styles */
-.mobile-menu {
-    display: none;
-}
-
-.accordion {
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.accordion:after {
-    content: '+';
-    font-size: 20px;
-    float: right;
-}
-
-.accordion.active:after {
-    content: '-';
-}
-
-.accordion.active {
-    background-color: #f5f5f5;
-}
-
-.panel {
-    background-color: #fff;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-}
-
-/* Desktop Menu Styles */
-.desktop-menu {
-    display: none;
-    grid-template-columns: 250px 1fr;
-    gap: 40px;
-}
-
-.menu-sidebar {
-    background-color: #f5f5f5;
-    padding: 20px 0;
-}
-
-.category {
-    padding: 15px 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.category.active {
-    background-color: #8b0000;
-    color: #fff;
-    position: relative;
-}
-
-.category.active:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-right: 15px solid #fff;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-}
-
-.menu-content {
-    padding: 20px;
-}
-
-.menu-item-detailed {
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.item-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 10px;
-}
-
-.item-header h3 {
-    font-size: 1.2em;
-    font-weight: normal;
-}
-
-.description {
-    color: #666;
-    margin-bottom: 10px;
-}
-
-.options {
-    color: #777;
-    font-size: 0.9em;
-}
-
-.options p {
-    margin: 5px 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .logo {
-        width: 200px;
-        height: 200px;
-    }
-
-    .menu-page {
-        padding: 0; /*remove if not using*/
-    }
-    .mobile-menu {
-        display: block;
-    }
-    .desktop-menu {
-        display: none;
-    }
-    .home-content {
-        padding-top: 160px;
-    }
-
-    .food-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    /* Hide address bar on mobile */
-    .address-bar {
-        display: none;
-    }
-
-    /* Adjust mobile menu button position */
-    .mobile-menu-btn {
-        display: block;
-        color: white;  /* Change back to white since it's on hero image */
-        top: 1rem;     /* Adjust position since address bar is hidden */
-        right: 1rem;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        padding: 3rem 2rem 2rem;  /* Reduced top padding */
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    /* Update scrolled header styles */
-    .main-header.scrolled .mobile-menu-btn {
-        color: #333;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-menu {
-        display: none;
-    }
-    .desktop-menu {
-        display: grid;
-    }
-}
-
 /* Animation Classes */
 .fade-in {
     opacity: 0;
@@ -620,22 +318,6 @@ footer {
     transition-delay: 0.2s;
 }
 
-.gallery-item {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.gallery-item.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.gallery-item:nth-child(1) { transition-delay: 0.2s; }
-.gallery-item:nth-child(2) { transition-delay: 0.4s; }
-.gallery-item:nth-child(3) { transition-delay: 0.6s; }
-.gallery-item:nth-child(4) { transition-delay: 0.8s; }
-
 /* Add hero section styles */
 .hero-section {
     height: 100vh;
@@ -646,7 +328,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                      url('/images/food.jpg');
+                      url('/images/background1.webp');
     margin-bottom: 0;
     z-index: 3;
 }
@@ -654,22 +336,19 @@ footer {
 /* Add menu button styles */
 .view-menu-btn {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     background: transparent;
     color: white;
-    border: 2px solid white;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 1rem;
+    border: 2px solid white;
     transition: all 0.3s ease;
 }
 
 .view-menu-btn:hover {
     background: white;
-    color: black;
-    transform: translateY(-2px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    color: #333;
 }
 
 /* Info Sections Styles */
@@ -907,33 +586,6 @@ footer {
     transform: translateY(-2px);
 }
 
-/* Add Font Awesome in the head section of your HTML */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .about-section, .reservations-section {
-        padding: 4rem 1.5rem;
-    }
-
-    .about-content, .reservations-content {
-        flex-direction: column;
-    }
-
-    .about-left, .reservations-right {
-        width: 100%;
-    }
-
-    .about-image, .reservations-image {
-        position: relative;
-        height: 50vh;
-    }
-
-    .about-left, .reservations-right {
-        padding: 2rem;
-    }
-}
-
 /* Common text styles */
 h2, .about-text h2, .reservations-text h3 {
     font-size: 2.8rem;
@@ -981,17 +633,6 @@ h2, .about-text h2, .reservations-text h3 {
     letter-spacing: 2px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    h2, .about-text h2, .reservations-text h3 {
-        font-size: 2.2rem;
-    }
-
-    .subtitle {
-        font-size: 1.1rem;
-    }
-}
-
 /* Mobile menu styles */
 .mobile-menu-btn {
     display: none;
@@ -1013,88 +654,6 @@ h2, .about-text h2, .reservations-text h3 {
     padding: 1.5rem;
 }
 
-/* Update responsive styles */
-@media (max-width: 1024px) {
-    /* Hide fixed images on tablets and smaller */
-    .about-image, .reservations-image {
-        display: none;
-    }
-
-    .about-left, .reservations-right {
-        width: 100%;
-    }
-
-    .about-content, .reservations-content {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Mobile menu styles */
-    .mobile-menu-btn {
-        display: block;
-        color: #333;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.98);
-        padding: 4rem 2rem 2rem;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .nav-links a {
-        color: #333 !important;
-        font-size: 1.1rem;
-    }
-
-    .nav-links a:hover {
-        color: #8b0000 !important;
-    }
-
-    .main-header.scrolled .mobile-menu-btn {
-        color: #333;
-    }
-
-    /* Keep the order link burgundy */
-    .nav-links .order-link {
-        color: #8b0000 !important;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    /* Adjust section padding */
-    .about-left, .reservations-right {
-        padding: 2rem;
-    }
-
-    /* Adjust font sizes */
-    h2, .about-text h2, .reservations-text h3 {
-        font-size: 2.2rem;
-    }
-
-    .subtitle {
-        font-size: 1.1rem;
-    }
-
-    /* Adjust spacing */
-    .contact-icons {
-        gap: 1.5rem;
-    }
-
-    .hours, .phone {
-        margin: 1rem 0;
-    }
-}
 
 /* Mobile header styles */
 .mobile-header {
@@ -1126,29 +685,6 @@ h2, .about-text h2, .reservations-text h3 {
 .mobile-logo img {
     height: 100%;
     width: auto;
-}
-
-@media (max-width: 768px) {
-    .mobile-header {
-        display: block;
-    }
-
-    /* Adjust mobile menu button */
-    .mobile-menu-btn {
-        position: static;  /* Remove fixed positioning */
-        color: #333;
-        padding: 0.5rem;
-    }
-
-    /* Adjust nav links position */
-    .nav-links {
-        top: 60px;  /* Start below mobile header */
-    }
-
-    /* Adjust main content */
-    .hero-section {
-        padding-top: 60px;  /* Add padding to account for fixed header */
-    }
 }
 
 /* Add these new classes */
@@ -1183,40 +719,12 @@ h2, .about-text h2, .reservations-text h3 {
     margin-top: 1rem;
 }
 
-/* Menu Items Layout */
-.menu-items {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 600px;  /* Set consistent max-width for menu items */
-    margin: 0 auto;    /* Center the menu items */
-}
-
-.menu-item {
-    width: 100%;       /* Full width of container */
-}
-
 .item-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 0.5rem;
     width: 100%;       /* Full width of container */
-}
-
-.item-header h3 {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: #333;
-    flex: 1;          /* Take up available space */
-    margin-right: 2rem; /* Consistent spacing before price */
-}
-
-.price {
-    font-size: 1.1rem;
-    color: #333;
-    min-width: 50px;  /* Consistent width for price */
-    text-align: right;
 }
 
 .description {
@@ -1230,127 +738,8 @@ h2, .about-text h2, .reservations-text h3 {
 /* Menu Section Header */
 .menu-section h2 {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.8rem;
+    margin-top: 1rem;
+    font-size: 2.1rem;
     font-weight: normal;
     color: #8b0000;
-}
-
-/* Mobile-specific improvements */
-@media (max-width: 768px) {
-    /* Menu page layout */
-    .menu-layout {
-        flex-direction: column;
-        min-height: 100vh;
-        padding-top: 60px;
-    }
-
-    .menu-hero {
-        position: relative;  /* Change from static to relative */
-        width: 100%;
-        height: 200px;     /* Shorter height for mobile */
-        padding-top: 0;    /* Remove padding */
-        background: #000;
-        overflow: hidden;  /* Contain the image */
-    }
-
-    .menu-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .menu-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.7;
-    }
-
-    .menu-nav {
-        position: absolute;
-        top: 50%;         /* Center vertically */
-        left: 50%;        /* Center horizontally */
-        transform: translate(-50%, -50%); /* Perfect centering */
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem;
-        background: transparent;
-        width: auto;
-        z-index: 2;
-    }
-
-    .menu-nav-btn {
-        padding: 0.5rem 2rem;
-        font-size: 0.9rem;
-        min-width: 160px;
-        text-align: center;
-        background: transparent;
-        color: white;
-        border: 2px solid white;
-    }
-
-
-    .menu-container {
-        width: 100%;
-        margin-left: 0;
-        flex: 1;
-    }
-
-    /* Menu items styling */
-    .menu-section {
-        width: 100%;
-    }
-
-    .menu-section h2 {
-        font-size: 2rem;
-        color: #8b0000;
-        margin-bottom: 2rem;
-        text-align: left;
-        border-bottom: none;
-    }
-
-    .menu-items {
-        width: 100%;
-        max-width: none;
-        gap: 1.5rem;
-    }
-
-    .menu-item {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .item-header {
-        margin-bottom: 0.25rem;
-    }
-
-    .item-header h3 {
-        font-size: 1.1rem;
-        margin-right: 1rem;
-    }
-
-    .description {
-        font-size: 0.9rem;
-        color: #666;
-    }
-
-    /* Fix footer */
-    footer {
-        position: static;
-        width: 100%;
-        background: #303030;
-        padding: 1rem;
-        margin-top: auto;
-    }
-
-    /* Ensure proper page structure */
-    .menu-page {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
 }

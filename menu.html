@@ -12,7 +12,7 @@
     <div class="mobile-header">
         <div class="mobile-header-content">
             <a href="index.html" class="mobile-logo">
-                <img src="/images/logo.webp" alt="Logo">
+                <img src="/images/logo.png" alt="Logo">
             </a>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -35,12 +35,17 @@
     <div class="menu-layout">
         <div class="menu-hero">
             <div class="menu-nav">
-                <a href="appetizers.html" class="menu-nav-btn">APPETIZERS</a>
-                <a href="soups.html" class="menu-nav-btn">SOUPS</a>
-                <a href="maindishes.html" class="menu-nav-btn">MAIN DISHES</a>
+                <button class="menu-nav-btn" onclick="showCategory('appetizers')">APPETIZERS & SOUPS</button>
+                <button class="menu-nav-btn" onclick="showCategory('poultry')">POULTRY</button>
+                <button class="menu-nav-btn" onclick="showCategory('seafood')">SEAFOOD</button>
+                <button class="menu-nav-btn" onclick="showCategory('beef')">BEEF</button>
+                <button class="menu-nav-btn" onclick="showCategory('pork')">PORK</button>
+                <button class="menu-nav-btn" onclick="showCategory('noodlesrice')">NOODLES & RICE</button>
+                <button class="menu-nav-btn" onclick="showCategory('vegetables')">VEGETABLES</button>
+                <button class="menu-nav-btn" onclick="showCategory('combinations')">COMBINATIONS</button>
             </div>
             <div class="menu-image">
-                <img src="/images/food.jpg" alt="Featured Dish">
+                <img id="category-image" src="/images/food.jpg" alt="Featured Dish">
             </div>
         </div>
 
@@ -48,14 +53,17 @@
             <div class="menu-section fade-in">
                 <h2>OUR MENU</h2>
                 <p class="menu-intro">Select a category from the left to view our dishes.</p>
+                <div class="menu-items">
+                </div>
             </div>
         </main>
     </div>
 
     <footer>
-        <p>&copy; 2024 Canton Palace Trinidad. All rights reserved.</p>
+        <p>&copy; 2024 Canton Palace Limited. All rights reserved.</p>
     </footer>
 
     <script src="animations.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>
