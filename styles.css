@@ -10,14 +10,12 @@ body {
     min-height: 100vh;
 }
 
-/* Home page specific styles type shit*/
 .home-page {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><rect width="400" height="400" fill="white"/><path d="M0 0h400v400H0z" fill="%23f0f0f0" fill-opacity="0.4"/></svg>');
     color: #333;
 }
 
-/* Header and Navigation type shit */
 .main-header {
     padding: 0;
     position: fixed;
@@ -119,7 +117,7 @@ main {
 }
 
 .restaurant-logo {
-    width: 200px;  /* Adjust size as needed */
+    width: 200px;  
     height: auto;
     margin-bottom: 1rem;
     filter: drop-shadow(5px 5px 5px rgba(133, 133, 133, 0.726));
@@ -134,10 +132,10 @@ main {
 footer {
     text-align: center;
     padding: 1rem;
-    background: #303030;  /* Dark grey background */
-    color: white;     /* White text */
-    position: relative; /* Add this to ensure footer appears above images */
-    z-index: 5;       /* Higher z-index to appear above fixed images */
+    background: #303030;  
+    color: white;     
+    position: relative; 
+    z-index: 5;     
 }
 
 /* Menu Page Styles */
@@ -150,7 +148,7 @@ footer {
 .menu-layout {
     display: flex;
     min-height: 100vh;
-    padding-top: 60px; /* Account for mobile header */
+    padding-top: 60px; 
 }
 
 .menu-hero {
@@ -164,7 +162,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 60px; /* Account for mobile header */
+    padding-top: 60px;
 }
 
 .menu-image {
@@ -218,13 +216,13 @@ footer {
     margin-left: 40%;
     padding: 4rem;
     display: flex;
-    justify-content: center;  /* Center the content horizontally */
+    justify-content: center;  
 }
 
 /* Menu Section */
 .menu-section {
-    width: 100%;      /* Take full width of container */
-    max-width: 600px; /* Set maximum width */
+    width: 100%;      
+    max-width: 600px;
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.6s ease forwards;
@@ -242,7 +240,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 100%;      /* Take full width of section */
+    width: 100%;     
 }
 
 .menu-item {
@@ -263,8 +261,8 @@ footer {
     font-size: 1rem;
     font-weight: normal;
     color: #333;
-    flex: 1;          /* Take up available space */
-    margin-right: 2rem; /* Consistent spacing before price */
+    flex: 1;        
+    margin-right: 2rem; 
 }
 
 .price {
@@ -305,13 +303,11 @@ footer {
     transform: translateY(0);
 }
 
-/* Update existing classes to work with animations */
 .logo-container {
     text-align: center;
     transition-delay: 0.2s;
 }
 
-/* Add hero section styles */
 .hero-section {
     height: 100vh;
     width: 100%;
@@ -326,7 +322,7 @@ footer {
     z-index: 3;
 }
 
-/* Add menu button styles */
+/* menu button styles */
 .view-menu-btn {
     display: inline-block;
     padding: 1rem 2rem;
@@ -349,7 +345,7 @@ footer {
     padding: 0;
     background: #fff;
     position: relative;
-    z-index: 2;      /* Keep content above images but below footer */
+    z-index: 2;     
 }
 
 .about-section, .reservations-section {
@@ -409,13 +405,13 @@ footer {
 }
 
 .about-image {
-    position: fixed;  /* Change from absolute to fixed */
+    position: fixed;  
     width: 50%;
     height: 100vh;
     right: 0;
     top: 0;
     aspect-ratio: auto;
-    z-index: 1;      /* Lower z-index to stay behind footer */
+    z-index: 1;    
 }
 
 .about-image img {
@@ -519,13 +515,13 @@ footer {
 }
 
 .reservations-image {
-    position: fixed;  /* Change from absolute to fixed */
+    position: fixed; 
     width: 50%;
     height: 100vh;
     left: 0;
     top: 0;
     aspect-ratio: auto;
-    z-index: 1;      /* Lower z-index to stay behind footer */
+    z-index: 1;    
 }
 
 .reservations-image img {
@@ -680,7 +676,6 @@ h2, .about-text h2, .reservations-text h3 {
     width: auto;
 }
 
-/* Add these new classes */
 .info-block {
     margin: 1.5rem 0;
     padding-bottom: 0;
@@ -718,7 +713,7 @@ h2, .about-text h2, .reservations-text h3 {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 0.5rem;
-    width: 100%;       /* Full width of container */
+    width: 100%;      
 }
 
 .description {
@@ -726,7 +721,7 @@ h2, .about-text h2, .reservations-text h3 {
     color: #666;
     line-height: 1.6;
     margin-bottom: 1rem;
-    width: 100%;      /* Full width of container */
+    width: 100%;    
 }
 
 /* Menu Section Header */
