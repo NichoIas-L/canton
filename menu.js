@@ -146,8 +146,8 @@ let menuData = [];
 function updateMenuImage(category) {
     const imageMap = {
         'appetizers': '/images/appetizers.jpg',
-        'poultry': '/images/food2.jpg',
-        'seafood': '/images/food3.jpg',
+        'poultry': '/images/poultry.jpg',
+        'seafood': '/images/seafood.jpg',
         'beef': '/images/beef.jpg',
         'pork': '/images/pork.jpg',
         'noodlesrice': '/images/noodles.jpg',
